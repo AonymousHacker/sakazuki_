@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    
+}
+
+.title {
+    text-align: center;
+    color: greenyellow;
+}
+
+.chat {
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 1rem;
+    width: 3rem;
+    height: 2rem;
+    
+}
+
+.chat:hover {
+     background-color: cyan;
+     cursor: grab;
+}
+
+.target {
+    background-color: whitesmoke;
+    border: none;
+    width: 3rem;
+    height: 2rem;
+}
+
+.target:hover {
+    background-color: gold;
+    cursor: pointer;
+}
+

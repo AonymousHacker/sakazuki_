@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dark Chat</title>
+	<style>
+		body {
+			background-color: #222;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		
+		.chat {
+			background-color: #333;
+			border-radius: 5px;
+			padding: 10px;
+			margin-bottom: 20px;
+			overflow-y: scroll;
+			height: 400px;
+		}
+		
+		.chat p {
+			margin: 0;
+			padding: 0;
+			margin-bottom: 10px;
+		}
+		
+		form {
+			display: flex;
+			flex-direction: column;
+		}
+		
+		input[type="text"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			margin-bottom: 10px;
+			background-color: #444;
+			color: #fff;
+			font-size: 16px;
+		}
+		
+		button[type="submit"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			background-color: #0080ff;
+			color: #fff;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		
+		button[type="submit"]:hover {
+			background-color: #0059b3;
+		}
+		
+		label {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+		
+		input[type="text"][name="username"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			margin-bottom: 10px;
+			background-color: #444;
+			color: #fff;
+			font-size: 16px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="chat" id="chat">
+			
+		</div>
+		
+		<form onsubmit="sendMessage(); return false;">
+			<label for="username">Enter your username:</label>
+			<input type="text" name="username" id="username" required>
+			
+			<label for="message">Enter your message:</label>
+			<input type="text" name="message" id="message" required>
+			
+			<button type="submit">Send</button>
+		</form>
+	</div>
+
+<script>
+	function sendMessage() {
+	  var chat = document.getElementById("chat");
+	  var username = document.getElementById("username");
+	  var message = document.getElementById("message");
+
+	  var p = document.createElement("p");
+	  p.innerHTML = "<strong>" + username.value + ":</strong> " + message.value;
+
+	  chat.appendChild(p);
+
+	  message.value = "";
+	  message.focus();
+	}
+</script>
+
+</body>
+</html>

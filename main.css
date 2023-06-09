@@ -1,0 +1,20 @@
+.title {
+    text-align: center;
+    color: firebrick;
+}
+
+body {
+    background-color: grey;
+}
+
+.p {
+    margin-top: 30rem;
+    text-align: center;
+}
+
+.network {
+    width: 80px;
+    border-radius: 5px;
+    height: 60px;
+
+}
